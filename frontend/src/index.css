@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -121,11 +121,11 @@
 
 /* Custom styles for Py013 */
 .hero-bg {
-  background: linear-gradient(135deg, #173c5c 0%, #2D4A6B 100%);
+  background: linear-gradient(135deg, #173c5c 0%, #2d4a6b 100%);
 }
 
 .code-pattern {
-  background-image: 
+  background-image:
     linear-gradient(90deg, rgba(54, 144, 217, 0.1) 1px, transparent 1px),
     linear-gradient(rgba(54, 144, 217, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
