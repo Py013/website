@@ -13,3 +13,4 @@ export function RiMailFill({ className = "w-6 h-6" }: RiMailFillProps) {
     </svg>
   );
 }
+

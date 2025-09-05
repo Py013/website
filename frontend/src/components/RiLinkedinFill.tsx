@@ -13,3 +13,4 @@ export function RiLinkedinFill({ className = "w-6 h-6" }: RiLinkedinFillProps) {
     </svg>
   );
 }
+

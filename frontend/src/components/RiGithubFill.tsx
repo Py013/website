@@ -13,3 +13,4 @@ export function RiGithubFill({ className = "w-6 h-6" }: RiGithubFillProps) {
     </svg>
   );
 }
+
