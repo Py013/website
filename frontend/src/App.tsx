@@ -1,4 +1,3 @@
-import { useState } from 'react';
 
 import Navbar from './Navbar';
 import { IcBaselineDiscord } from './components/IcBaselineDiscord';
@@ -8,11 +7,6 @@ import { RiLinkedinFill } from './components/RiLinkedinFill';
 import { RiMailFill } from './components/RiMailFill';
 import { Button } from './components/ui/button';
 import { Card, CardContent } from './components/ui/card';
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from './components/ui/collapsible';
 import { NumberTicker } from './components/ui/number-ticker';
 import { BlurFade } from './components/ui/blur-fade';
 import { DottedMap } from './components/ui/dotted-map';
@@ -22,15 +16,6 @@ import { AnimatedShinyText } from './components/ui/animated-shiny-text';
 import { cn } from './lib/utils';
 
 function App() {
-  const [openItems, setOpenItems] = useState<string[]>([]);
-
-  const toggleItem = (itemId: string) => {
-    setOpenItems(prev =>
-      prev.includes(itemId)
-        ? prev.filter(id => id !== itemId)
-        : [...prev, itemId]
-    );
-  };
 
   return (
     <div className="min-h-screen bg-[#26587e]">
@@ -53,7 +38,7 @@ function App() {
               )}
             >
               <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-white hover:duration-300">
-                <span className="text-gray-300">Eventos | workshops | Aulas e muito mais sobre o universo Python</span>
+                <span className="text-gray-300">Eventos | workshops | e muito mais sobre o universo Python</span>
               </AnimatedShinyText>
             </div>
           </BlurFade>
@@ -81,10 +66,12 @@ function App() {
                 de voluntários. Nossa missão é democratizar o acesso ao
                 conhecimento.
               </p>
-              <Button className="flex items-center gap-3 text-lg text-black font-semibold px-6 py-7 rounded-2xl bg-[#ffd86b] hover:bg-[#ffd86b]/90">
-                <RiInstagramFill className="size-8" />
-                Participe da Nossa Comunidade
-              </Button>
+              <a href="https://www.instagram.com/py013_baixadasantista/" target="_blank" rel="noopener noreferrer">
+                <Button className="flex items-center gap-3 text-lg text-black font-semibold px-6 py-7 rounded-2xl bg-[#ffd86b] hover:bg-[#ffd86b]/90 hover:cursor-pointer">
+                  <RiInstagramFill className="size-8" />
+                  Participe da Nossa Comunidade
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -143,19 +130,19 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="bg-[#ffd86b] text-black border-none">
-              <CardContent className="text-center flex items-center justify-center gap-2">
+              <CardContent className="text-center flex flex-col items-center justify-center gap-2">
                 <p className="text-2xl font-bold">+<NumberTicker value={20} /></p>
                 <p className="font-semibold">Cidades impactadas</p>
               </CardContent>
             </Card>
             <Card className="bg-[#ffd86b] text-black border-none">
-              <CardContent className="text-center flex items-center justify-center gap-2">
+              <CardContent className="text-center flex flex-col items-center justify-center gap-2">
                 <p className="text-2xl font-bold">+<NumberTicker value={1800} /></p>
                 <p className="font-semibold">Seguidores nas nossas redes</p>
               </CardContent>
             </Card>
             <Card className="bg-[#ffd86b] text-black border-none">
-              <CardContent className="text-center flex items-center justify-center gap-2">
+              <CardContent className="text-center flex flex-col items-center justify-center gap-2">
                 <p className="text-2xl font-bold">+<NumberTicker value={40} /></p>
                 <p className="font-semibold">Eventos realizados</p>
               </CardContent>
@@ -171,15 +158,21 @@ function App() {
           <h2 className="text-4xl font-bold mb-12 text-white">Onde Estamos</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <div className="social-button flex flex-col items-center">
-              <RiInstagramFill className="size-24 mb-2" />
+              <a href="https://www.instagram.com/py013_baixadasantista/" target="_blank" rel="noopener noreferrer">
+                <RiInstagramFill className="size-24 mb-2" />
+              </a>
               <span className="font-semibold">Instagram</span>
             </div>
             <div className="social-button flex flex-col items-center">
-              <IcBaselineDiscord className="size-24 mb-2" />
+              <a href="https://discord.gg/NnrjunGjHm" target="_blank" rel="noopener noreferrer">
+                <IcBaselineDiscord className="size-24 mb-2" />
+              </a>
               <span className="font-semibold">Discord</span>
             </div>
             <div className="social-button flex flex-col items-center">
-              <RiLinkedinFill className="size-24 mb-2" />
+              <a href="https://www.linkedin.com/company/py013/" target="_blank" rel="noopener noreferrer">
+                <RiLinkedinFill className="size-24 mb-2" />
+              </a>
               <span className="font-semibold">LinkedIn</span>
             </div>
           </div>
@@ -268,13 +261,23 @@ function App() {
 
       <footer className="bg-[#3690D9] py-8 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="text-white mb-4 md:mb-0">@2025 Py013</div>
+          <div className="text-white mb-4 md:mb-0">@2026 Py013 - Todos os direitos reservados</div>
           <div className="flex space-x-4">
-            <RiLinkedinFill className="w-6 h-6 text-white" />
-            <RiInstagramFill className="w-6 h-6 text-white" />
-            <IcBaselineDiscord className="w-6 h-6 text-white" />
-            <RiGithubFill className="w-6 h-6 text-white" />
-            <RiMailFill className="w-6 h-6 text-white" />
+            <a href="https://www.linkedin.com/company/py013/" target="_blank" rel="noopener noreferrer">
+              <RiLinkedinFill className="w-6 h-6 text-white" />
+            </a>
+            <a href="https://www.instagram.com/py013_baixadasantista/" target="_blank" rel="noopener noreferrer">
+              <RiInstagramFill className="w-6 h-6 text-white" />
+            </a>
+            <a href="https://discord.gg/NnrjunGjHm" target="_blank" rel="noopener noreferrer">
+              <IcBaselineDiscord className="w-6 h-6 text-white" />
+            </a>
+            <a href="https://github.com/Py013/" target="_blank" rel="noopener noreferrer">
+              <RiGithubFill className="w-6 h-6 text-white" />
+            </a>
+            <a href="mailto:py013@gmail.com" target="_blank" rel="noopener noreferrer">
+              <RiMailFill className="w-6 h-6 text-white" />
+            </a>
           </div>
         </div>
       </footer>
