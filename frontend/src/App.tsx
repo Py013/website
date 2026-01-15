@@ -14,6 +14,7 @@ import { HyperText } from './components/ui/hyper-text';
 import { LineShadowText } from './components/ui/line-shadow-text';
 import { AnimatedShinyText } from './components/ui/animated-shiny-text';
 import { cn } from './lib/utils';
+import { Users, Globe, Unlock, Heart, Sparkles } from 'lucide-react';
 
 function App() {
 
@@ -181,63 +182,119 @@ function App() {
 
       <div className="h-2 bg-gradient-to-r from-[#173c5c] via-[#1f4a6b] to-[#26587e]"></div>
 
-      <div className="py-20 px-4">
-        <div className="max-w-6xl mx-auto text-left">
-          <h2 className="text-4xl font-bold mb-12 text-white text-center">
-            Valores
-          </h2>
-          <div className="flex flex-col gap-0 w-full mx-auto">
-            <div className="flex justify-start w-full mb-4">
-              <Card className="border-2 border-[#ffd86b] bg-transparent rounded-4xl w-3/4">
-                <CardContent className="text-white">
-                  <p className="font-semibold">
-                    Colaboração – Acreditamos na aprendizagem coletiva e no
-                    compartilhamento de conhecimento
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="flex justify-end w-full mb-4">
-              <Card className="border-2 border-[#ffd86b] bg-transparent rounded-4xl w-3/4">
-                <CardContent className="text-white">
-                  <p className="font-semibold">
-                    Democratização da tecnologia – A programação e a computação
-                    devem ser acessíveis
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="flex justify-start w-full mb-4">
-              <Card className="border-2 border-[#ffd86b] bg-transparent rounded-4xl w-3/4">
-                <CardContent className="text-white">
-                  <p className="font-semibold">
-                    Inovação aberta – Amamos projetos de software livre e open
-                    source
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="flex justify-end w-full mb-4">
-              <Card className="border-2 border-[#ffd86b] bg-transparent rounded-4xl w-3/4">
-                <CardContent className="text-white">
-                  <p className="font-semibold">
-                    Inclusão – Aceitamos e incentivamos a participação de
-                    qualquer pessoa interessada em aprender ou colaborar
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="flex justify-start w-full">
-              <Card className="border-2 border-[#ffd86b] bg-transparent rounded-4xl w-3/4">
-                <CardContent className="text-white">
-                  <p className="font-semibold">
-                    Afeto e amizade – Python é divertido como Monty Python,
-                    acreditamos no poder do afeto e da amizade
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+      <div className="py-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#ffd86b]/5 to-transparent"></div>
+        <div className="max-w-6xl mx-auto relative">
+          <BlurFade>
+            <h2 className="text-4xl font-bold mb-16 text-white text-center">
+              Nossos Valores
+            </h2>
+          </BlurFade>
+
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <BlurFade delay={0.2} className="flex-1 w-full">
+              <div className="flex flex-col gap-6">
+                <Card className="group bg-gradient-to-br from-white/10 to-white/5 rounded-2xl backdrop-blur-sm border-0">
+                  <CardContent className="text-white p-5">
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#ffd86b]/20 flex items-center justify-center">
+                        <Users className="w-8 h-8 text-[#ffd86b]" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-[#ffd86b] mb-2">Colaboração</h3>
+                        <p className="text-sm text-gray-200 leading-relaxed">
+                          Acreditamos na aprendizagem coletiva e no compartilhamento de conhecimento
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group bg-gradient-to-br from-white/10 to-white/5 rounded-2xl backdrop-blur-sm border-0">
+                  <CardContent className="text-white p-5">
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#ffd86b]/20 flex items-center justify-center">
+                        <Globe className="w-8 h-8 text-[#ffd86b]" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-[#ffd86b] mb-2">Democratização</h3>
+                        <p className="text-sm text-gray-200 leading-relaxed">
+                          A programação e a computação devem ser acessíveis a todos
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </BlurFade>
+
+            <BlurFade delay={0.3} className="flex-shrink-0">
+              <div className="relative w-64 h-64 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#ffd86b]/20 to-transparent rounded-full blur-3xl"></div>
+                <img
+                  src="/images/logo.png"
+                  alt="Py013 Logo"
+                  className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_30px_rgba(255,216,107,0.3)] animate-pulse"
+                />
+              </div>
+            </BlurFade>
+
+            <BlurFade delay={0.4} className="flex-1 w-full">
+              <div className="flex flex-col gap-6">
+                <Card className="group bg-gradient-to-br from-white/10 to-white/5 rounded-2xl backdrop-blur-sm border-0">
+                  <CardContent className="text-white p-5">
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#ffd86b]/20 flex items-center justify-center">
+                        <Unlock className="w-8 h-8 text-[#ffd86b]" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-[#ffd86b] mb-2">Inovação aberta</h3>
+                        <p className="text-sm text-gray-200 leading-relaxed">
+                          Amamos projetos de software livre e open source
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="group bg-gradient-to-br from-white/10 to-white/5 rounded-2xl backdrop-blur-sm border-0">
+                  <CardContent className="text-white p-5">
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#ffd86b]/20 flex items-center justify-center">
+                        <Heart className="w-8 h-8 text-[#ffd86b]" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-[#ffd86b] mb-2">Inclusão</h3>
+                        <p className="text-sm text-gray-200 leading-relaxed">
+                          Incentivamos a participação de todos interessados em aprender
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </BlurFade>
           </div>
+
+          <BlurFade delay={0.5}>
+            <div className="mt-10 flex justify-center">
+              <Card className="group bg-gradient-to-br from-white/10 to-white/5 rounded-2xl backdrop-blur-sm max-w-2xl border-0">
+                <CardContent className="text-white p-5">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#ffd86b]/20 flex items-center justify-center">
+                      <Sparkles className="w-8 h-8 text-[#ffd86b]" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#ffd86b] mb-2">Afeto e amizade</h3>
+                      <p className="text-sm text-gray-200 leading-relaxed">
+                        Python é divertido como Monty Python, acreditamos no poder do afeto e da amizade
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </BlurFade>
         </div>
       </div>
 
