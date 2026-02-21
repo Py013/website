@@ -158,24 +158,24 @@ function App() {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-12 text-white">Onde Estamos</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="social-button flex flex-col items-center">
-              <a href="https://www.instagram.com/py013_baixadasantista/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/py013_baixadasantista/" target="_blank" rel="noopener noreferrer">
+              <div className="social-button flex flex-col items-center">
                 <RiInstagramFill className="size-24 mb-2" />
-              </a>
-              <span className="font-semibold">Instagram</span>
-            </div>
-            <div className="social-button flex flex-col items-center">
-              <a href="https://discord.gg/NnrjunGjHm" target="_blank" rel="noopener noreferrer">
+                <span className="font-semibold">Instagram</span>
+              </div>
+            </a>
+            <a href="https://discord.gg/NnrjunGjHm" target="_blank" rel="noopener noreferrer">
+              <div className="social-button flex flex-col items-center">
                 <IcBaselineDiscord className="size-24 mb-2" />
-              </a>
-              <span className="font-semibold">Discord</span>
-            </div>
-            <div className="social-button flex flex-col items-center">
-              <a href="https://www.linkedin.com/company/py013/" target="_blank" rel="noopener noreferrer">
+                <span className="font-semibold">Discord</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/company/py013/" target="_blank" rel="noopener noreferrer">
+              <div className="social-button flex flex-col items-center">
                 <RiLinkedinFill className="size-24 mb-2" />
-              </a>
-              <span className="font-semibold">LinkedIn</span>
-            </div>
+                <span className="font-semibold">LinkedIn</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
