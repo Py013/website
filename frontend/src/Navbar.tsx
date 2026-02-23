@@ -19,6 +19,7 @@ import { RiGithubFill } from './components/RiGithubFill';
 import { RiLinkedinFill } from './components/RiLinkedinFill';
 import { RiMailFill } from './components/RiMailFill';
 import { RiInstagramFill } from './components/RiInstagramFill';
+import { BarraLinks } from './components/BarraLinks';
 
 const HamburgerIcon = ({ className, ...props }: React.SVGAttributes<SVGElement>) => (
   <svg
@@ -194,23 +195,7 @@ const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
                 )}
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <a href="https://www.instagram.com/py013_baixadasantista/" target="_blank" rel="noopener noreferrer">
-                <RiInstagramFill className="w-6 h-6 text-white hover:text-[#FDD835] transition-colors cursor-pointer" />
-              </a>
-              <a href="https://github.com/Py013/" target="_blank" rel="noopener noreferrer">
-                <RiGithubFill className="w-6 h-6 text-white hover:text-[#FDD835] transition-colors cursor-pointer" />
-              </a>
-              <a href="https://discord.gg/NnrjunGjHm" target="_blank" rel="noopener noreferrer">
-                <IcBaselineDiscord className="w-6 h-6 text-white hover:text-[#FDD835] transition-colors cursor-pointer" />
-              </a>
-              <a href="mailto:py013@gmail.com" target="_blank" rel="noopener noreferrer">
-                <RiMailFill className="w-6 h-6 text-white hover:text-[#FDD835] transition-colors cursor-pointer" />
-              </a>
-              <a href="https://www.linkedin.com/company/py013/" target="_blank" rel="noopener noreferrer">
-                <RiLinkedinFill className="w-6 h-6 text-white hover:text-[#FDD835] transition-colors cursor-pointer" />
-              </a>
-            </div>
+            <BarraLinks></BarraLinks>
           </div>
         </header>
         <div className="h-2 bg-gradient-to-r from-[#3f88b8] via-[#26587e] to-[#173c5c]"></div>

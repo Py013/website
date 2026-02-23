@@ -1,20 +1,19 @@
 
+import { Globe, Heart, Sparkles, Unlock, Users } from 'lucide-react';
 import Navbar from './Navbar';
 import { IcBaselineDiscord } from './components/IcBaselineDiscord';
-import { RiGithubFill } from './components/RiGithubFill';
+import { BarraLinks } from './components/BarraLinks';
 import { RiInstagramFill } from './components/RiInstagramFill';
 import { RiLinkedinFill } from './components/RiLinkedinFill';
-import { RiMailFill } from './components/RiMailFill';
+import { AnimatedShinyText } from './components/ui/animated-shiny-text';
+import { BlurFade } from './components/ui/blur-fade';
 import { Button } from './components/ui/button';
 import { Card, CardContent } from './components/ui/card';
-import { NumberTicker } from './components/ui/number-ticker';
-import { BlurFade } from './components/ui/blur-fade';
 import { DottedMap } from './components/ui/dotted-map';
 import { HyperText } from './components/ui/hyper-text';
 import { LineShadowText } from './components/ui/line-shadow-text';
-import { AnimatedShinyText } from './components/ui/animated-shiny-text';
+import { NumberTicker } from './components/ui/number-ticker';
 import { cn } from './lib/utils';
-import { Users, Globe, Unlock, Heart, Sparkles } from 'lucide-react';
 
 function App() {
 
@@ -39,7 +38,7 @@ function App() {
               )}
             >
               <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-white hover:duration-300">
-                <span className="text-gray-300">Eventos | workshops | e muito mais sobre o universo Python</span>
+                <span className="text-gray-300">Eventos | Workshops | E muito mais sobre o universo Python</span>
               </AnimatedShinyText>
             </div>
           </BlurFade>
@@ -158,24 +157,24 @@ function App() {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-12 text-white">Onde Estamos</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="social-button flex flex-col items-center">
-              <a href="https://www.instagram.com/py013_baixadasantista/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/py013_baixadasantista/" target="_blank" rel="noopener noreferrer">
+              <div className="social-button flex flex-col items-center">
                 <RiInstagramFill className="size-24 mb-2" />
-              </a>
-              <span className="font-semibold">Instagram</span>
-            </div>
-            <div className="social-button flex flex-col items-center">
-              <a href="https://discord.gg/NnrjunGjHm" target="_blank" rel="noopener noreferrer">
+                <span className="font-semibold">Instagram</span>
+              </div>
+            </a>
+            <a href="https://discord.gg/NnrjunGjHm" target="_blank" rel="noopener noreferrer">
+              <div className="social-button flex flex-col items-center">
                 <IcBaselineDiscord className="size-24 mb-2" />
-              </a>
-              <span className="font-semibold">Discord</span>
-            </div>
-            <div className="social-button flex flex-col items-center">
-              <a href="https://www.linkedin.com/company/py013/" target="_blank" rel="noopener noreferrer">
+                <span className="font-semibold">Discord</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/company/py013/" target="_blank" rel="noopener noreferrer">
+              <div className="social-button flex flex-col items-center">
                 <RiLinkedinFill className="size-24 mb-2" />
-              </a>
-              <span className="font-semibold">LinkedIn</span>
-            </div>
+                <span className="font-semibold">LinkedIn</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -319,23 +318,7 @@ function App() {
       <footer className="bg-[#3690D9] py-8 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-white mb-4 md:mb-0">@2026 Py013 - Todos os direitos reservados</div>
-          <div className="flex space-x-4">
-            <a href="https://www.linkedin.com/company/py013/" target="_blank" rel="noopener noreferrer">
-              <RiLinkedinFill className="w-6 h-6 text-white" />
-            </a>
-            <a href="https://www.instagram.com/py013_baixadasantista/" target="_blank" rel="noopener noreferrer">
-              <RiInstagramFill className="w-6 h-6 text-white" />
-            </a>
-            <a href="https://discord.gg/NnrjunGjHm" target="_blank" rel="noopener noreferrer">
-              <IcBaselineDiscord className="w-6 h-6 text-white" />
-            </a>
-            <a href="https://github.com/Py013/" target="_blank" rel="noopener noreferrer">
-              <RiGithubFill className="w-6 h-6 text-white" />
-            </a>
-            <a href="mailto:py013@gmail.com" target="_blank" rel="noopener noreferrer">
-              <RiMailFill className="w-6 h-6 text-white" />
-            </a>
-          </div>
+          <BarraLinks></BarraLinks>
         </div>
       </footer>
     </div >
