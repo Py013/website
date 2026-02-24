@@ -14,11 +14,6 @@ import {
   PopoverTrigger,
 } from './components/ui/popover';
 import { cn } from './lib/utils';
-import { IcBaselineDiscord } from './components/IcBaselineDiscord';
-import { RiGithubFill } from './components/RiGithubFill';
-import { RiLinkedinFill } from './components/RiLinkedinFill';
-import { RiMailFill } from './components/RiMailFill';
-import { RiInstagramFill } from './components/RiInstagramFill';
 import { BarraLinks } from './components/BarraLinks';
 
 const HamburgerIcon = ({ className, ...props }: React.SVGAttributes<SVGElement>) => (
