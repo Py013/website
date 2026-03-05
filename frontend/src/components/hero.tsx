@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 
-import { Calendar, ChevronRight, Code2 } from 'lucide-react';
+import { Calendar, Code2 } from 'lucide-react';
 
 import { RiInstagramFill } from './icons/instagram';
 

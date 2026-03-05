@@ -1,31 +1,6 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-
-import { useState } from 'react';
-
-import axios from 'axios';
-
 export function JoinCTA() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<
-    'idle' | 'loading' | 'success' | 'error'
-  >('idle');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-    setStatus('loading');
-    try {
-      await axios.post('/api/subscribe', { email: email.trim() });
-      setStatus('success');
-      setEmail('');
-    } catch {
-      setStatus('error');
-    }
-  };
-
   return (
     <section id="join" className="pt-24 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
