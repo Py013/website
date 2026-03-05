@@ -1,12 +1,16 @@
-import { MapPin } from "lucide-react";
-import { RiInstagramFill } from "./icons/instagram";
-import { MdiLinkedin } from "./icons/linkedin";
-import { MdiGithub } from "./icons/github";
-import { IcBaselineDiscord } from "./icons/discord";
+import { MapPin } from 'lucide-react';
+
+import { IcBaselineDiscord } from './icons/discord';
+import { MdiGithub } from './icons/github';
+import { RiInstagramFill } from './icons/instagram';
+import { MdiLinkedin } from './icons/linkedin';
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-white pt-20 pb-10 border-t border-gray-100">
+    <footer
+      id="contact"
+      className="bg-white pt-20 pb-10 border-t border-gray-100"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12 mb-16">
           <div>
@@ -39,7 +43,13 @@ export function Footer() {
               >
                 <MdiGithub className="size-5" />
               </a>
-              <a href="https://discord.gg/NnrjunGjHm" target="_blank" rel="noopener noreferrer" aria-label="Discord" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+              <a
+                href="https://discord.gg/NnrjunGjHm"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord"
+                className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+              >
                 <IcBaselineDiscord className="size-5" />
               </a>
             </div>
@@ -72,9 +82,11 @@ export function Footer() {
           <p className="text-sm text-gray-400">
             © 2026 Py013. Todos os direitos reservados.
           </p>
-          <p className="text-sm text-gray-400">Feito com ❤️ por membros da Py013. </p>
+          <p className="text-sm text-gray-400">
+            Feito com ❤️ por membros da Py013.{' '}
+          </p>
         </div>
       </div>
-    </footer >
+    </footer>
   );
 }

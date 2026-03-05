@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { RiInstagramFill } from "./icons/instagram";
+import { Button } from '@/components/ui/button';
+
+import { RiInstagramFill } from './icons/instagram';
 
 export function AboutSection() {
   return (
@@ -17,22 +18,39 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
           <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
             <p>
-              Somos uma <strong className="text-gray-900">organização sem fins lucrativos</strong> dedicada ao ensino colaborativo de tecnologia e programação. Desde 2018 conectando pessoas e promovemos a troca de conhecimento para capacitar entusiastas, profissionais e iniciantes na área tecnológica.
+              Somos uma{' '}
+              <strong className="text-gray-900">
+                organização sem fins lucrativos
+              </strong>{' '}
+              dedicada ao ensino colaborativo de tecnologia e programação. Desde
+              2018 conectando pessoas e promovemos a troca de conhecimento para
+              capacitar entusiastas, profissionais e iniciantes na área
+              tecnológica.
             </p>
             <p>
-              Realizamos aulas, eventos, confraternizações e ações em parceria com instituições de referência, tanto online quanto presencialmente. Nosso objetivo é criar <strong className="text-gray-900">oportunidades inclusivas</strong> para o desenvolvimento de habilidades que transformam carreiras e impactam vidas.
+              Realizamos aulas, eventos, confraternizações e ações em parceria
+              com instituições de referência, tanto online quanto
+              presencialmente. Nosso objetivo é criar{' '}
+              <strong className="text-gray-900">
+                oportunidades inclusivas
+              </strong>{' '}
+              para o desenvolvimento de habilidades que transformam carreiras e
+              impactam vidas.
             </p>
             <p>
-              Acreditamos que a inovação nasce da colaboração. Por isso, trabalhamos para fortalecer comunidades, ampliar o acesso ao aprendizado tecnológico e construir um futuro mais acessível e conectado.
+              Acreditamos que a inovação nasce da colaboração. Por isso,
+              trabalhamos para fortalecer comunidades, ampliar o acesso ao
+              aprendizado tecnológico e construir um futuro mais acessível e
+              conectado.
             </p>
           </div>
           <div className="relative">
             <div
               className="rounded-2xl overflow-hidden border border-gray-100 shadow-xl aspect-[4/3] bg-gray-100"
               style={{
-                backgroundImage: "url(/images/povo.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundImage: 'url(/images/povo.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
               }}
             />
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
@@ -61,7 +79,8 @@ export function AboutSection() {
               Online e presencial
             </h3>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Aulas, eventos e confraternizações para você participar do jeito que preferir.
+              Aulas, eventos e confraternizações para você participar do jeito
+              que preferir.
             </p>
           </div>
           <div className="group relative pl-6 sm:pl-8 sm:border-l-2 sm:border-gray-200 sm:hover:border-amber-400/60 transition-colors duration-300">
@@ -80,7 +99,8 @@ export function AboutSection() {
 
         <div className="text-center">
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            Sua presença faz a diferença. Venha trocar ideias, aprender e ensinar com a gente.
+            Sua presença faz a diferença. Venha trocar ideias, aprender e
+            ensinar com a gente.
           </p>
           <Button asChild size="lg" className="rounded-full">
             <a

@@ -1,13 +1,13 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const email = body?.email;
 
-    if (!email || typeof email !== "string") {
+    if (!email || typeof email !== 'string') {
       return NextResponse.json(
-        { error: "E-mail é obrigatório" },
+        { error: 'E-mail é obrigatório' },
         { status: 400 }
       );
     }
@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json(
-      { error: "Erro ao processar inscrição" },
+      { error: 'Erro ao processar inscrição' },
       { status: 500 }
     );
   }

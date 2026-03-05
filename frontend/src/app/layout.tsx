@@ -1,18 +1,19 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
+import './globals.css';
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
-  title: "Py013 - Comunidade Python da Baixada Santista",
+  title: 'Py013 - Comunidade Python da Baixada Santista',
   description:
-    "Aprenda, Colabore e Evolua com a Comunidade Python da Baixada Santista.",
+    'Aprenda, Colabore e Evolua com a Comunidade Python da Baixada Santista.',
   icons: {
-    icon: "/images/logo.png",
+    icon: '/images/logo.png',
   },
 };
 

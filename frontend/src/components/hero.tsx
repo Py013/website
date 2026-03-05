@@ -1,6 +1,8 @@
-import { ChevronRight, Code2, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { RiInstagramFill } from "./icons/instagram";
+import { Button } from '@/components/ui/button';
+
+import { Calendar, ChevronRight, Code2 } from 'lucide-react';
+
+import { RiInstagramFill } from './icons/instagram';
 
 export function Hero() {
   return (
@@ -20,8 +22,8 @@ export function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
-            Aulas, eventos e encontros para aprender e ensinar juntos. Desde 2018
-            conectando pessoas que curtem Python e tecnologia na região.
+            Aulas, eventos e encontros para aprender e ensinar juntos. Desde
+            2018 conectando pessoas que curtem Python e tecnologia na região.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
@@ -55,12 +57,13 @@ export function Hero() {
                 </div>
                 <div className="flex-1 p-6 font-mono text-sm overflow-visible relative">
                   <div className="text-blue-600">
-                    import <span className="text-gray-800">pandas</span> as{" "}
+                    import <span className="text-gray-800">pandas</span> as{' '}
                     <span className="text-gray-800">pd</span>
                   </div>
                   <div className="text-blue-600">
-                    import <span className="text-gray-800">matplotlib.pyplot</span>{" "}
-                    as <span className="text-gray-800">plt</span>
+                    import{' '}
+                    <span className="text-gray-800">matplotlib.pyplot</span> as{' '}
+                    <span className="text-gray-800">plt</span>
                   </div>
                   <br />
                   <div className="text-gray-500">
@@ -68,7 +71,10 @@ export function Hero() {
                   </div>
                   <div className="text-gray-800">
                     df = pd.read_csv(
-                    <span className="text-green-600">&apos;membros_py013.csv&apos;</span>)
+                    <span className="text-green-600">
+                      &apos;membros_py013.csv&apos;
+                    </span>
+                    )
                   </div>
                   <br />
                   <div className="text-gray-800">
@@ -94,7 +100,9 @@ export function Hero() {
                       </div>
                       <div>
                         <p className="text-xs text-gray-500">Próximo Evento</p>
-                        <p className="font-bold text-gray-900 text-sm">CodeDojo</p>
+                        <p className="font-bold text-gray-900 text-sm">
+                          CodeDojo
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-center justify-between text-xs text-gray-500">
@@ -102,7 +110,9 @@ export function Hero() {
                         <Calendar className="size-3.5" />
                         15 Out
                       </span>
-                      <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Confirmado</span>
+                      <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
+                        Confirmado
+                      </span>
                     </div>
                   </div>
 
@@ -113,7 +123,9 @@ export function Hero() {
                       </div>
                       <div>
                         <p className="text-xs text-gray-500">Próximo Evento</p>
-                        <p className="font-bold text-gray-900 text-sm">Open Data Day</p>
+                        <p className="font-bold text-gray-900 text-sm">
+                          Open Data Day
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-center justify-between text-xs text-gray-500">
@@ -121,7 +133,9 @@ export function Hero() {
                         <Calendar className="size-3.5" />
                         15 Mar
                       </span>
-                      <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Confirmado</span>
+                      <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
+                        Confirmado
+                      </span>
                     </div>
                   </div>
                 </div>
