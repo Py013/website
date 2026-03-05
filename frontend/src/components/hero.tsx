@@ -20,8 +20,8 @@ export function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
-            Junte-se à maior rede de desenvolvedores Python da Baixada Santista e
-            transforme sua paixão por código em grandes oportunidades.
+            Aulas, eventos e encontros para aprender e ensinar juntos. Desde 2018
+            conectando pessoas que curtem Python e tecnologia na região.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
