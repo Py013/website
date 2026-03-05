@@ -72,7 +72,6 @@ export function Footer() {
           <p className="text-sm text-gray-400">
             © 2026 Py013. Todos os direitos reservados.
           </p>
-
           <p className="text-sm text-gray-400">Feito com ❤️ por membros da Py013. </p>
         </div>
       </div>
