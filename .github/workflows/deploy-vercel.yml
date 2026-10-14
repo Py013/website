@@ -7,13 +7,23 @@ on:
       - master
     paths:
       - 'frontend/**'
+      - '.github/workflows/deploy-vercel.yml'
   pull_request:
     paths:
       - 'frontend/**'
+      - '.github/workflows/deploy-vercel.yml'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
     steps:
       - name: Checkout code
@@ -25,20 +35,28 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        working-directory: frontend
         run: bun install --frozen-lockfile
 
-      - name: Build Next.js
-        working-directory: frontend
-        run: bun run build
-        env:
-          SKIP_ENV_VALIDATION: 1
+      - name: Pull Vercel Environment Information
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            bunx vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN"
+          else
+            bunx vercel@latest pull --yes --environment=preview --token="$VERCEL_TOKEN"
+          fi
 
-      - name: Deploy to Vercel (Production)
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: ./frontend
-          vercel-args: '--prod'
+      - name: Build Project Artifacts
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            bunx vercel@latest build --prod --token="$VERCEL_TOKEN"
+          else
+            bunx vercel@latest build --token="$VERCEL_TOKEN"
+          fi
+
+      - name: Deploy Project Artifacts to Vercel
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            bunx vercel@latest deploy --prebuilt --prod --token="$VERCEL_TOKEN"
+          else
+            bunx vercel@latest deploy --prebuilt --token="$VERCEL_TOKEN"
+          fi
