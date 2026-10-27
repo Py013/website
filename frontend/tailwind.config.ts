@@ -9,6 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        background: '#ffffff',
+        foreground: '#111827',
+        muted: '#f3f4f6',
+        'muted-foreground': '#6b7280',
+        popover: '#ffffff',
+        'popover-foreground': '#111827',
+        border: '#e5e7eb',
+        ring: '#3776AB',
         primary: '#0f172a',
         'primary-foreground': '#f8fafc',
         secondary: '#f8fafc',
